@@ -67,5 +67,25 @@ padding-top:15px;
   text-align: center;
   color:#9be3df;
 }
-input#result {width:80%;background:#000;color:#fff;border:none;word-spacing: 15px;text-align:center;}
-button {font-size:50px;margin:10px;border-radius:50%;padding:10px 40px;background:firebrick;color:#fff;border:0;  cursor: pointer;}
+input#result {
+  width:80%;
+  background:#000;
+  color:#fff;
+  border:none;
+  word-spacing: 15px;
+  text-align:center;
+  line-height: 2em;
+  text-align: center;
+  word-spacing: 1.2em;
+  letter-spacing: 10;
+}
+
+button {
+  font-size:50px;
+  margin:10px;
+  border-radius:50%;
+  padding:10px 40px;
+  background:firebrick;
+  color:#fff;
+  border:0;
+  cursor: pointer;}

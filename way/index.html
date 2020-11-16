@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <meta charset="utf-8">
+    <title>WAY</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div><img id="image" style="display:block;margin-left:auto;margin-right:auto;cursor:pointer;" src="" name="randimg" ></div>
+    <div class="notice">Way by <a href="https://graemewalker.art" target="_blank">Graeme Walker</a> © 2019</div>
+
+    <script>var images = [
+  "https://1.bp.blogspot.com/-vc3tjVfiovA/Xl7r_BZQUII/AAAAAAAAF-4/Ml_Pc2cRcBsDLbQISIsxuyMkZ0r1WRo8wCLcBGAsYHQ/s1600/compass-01.gif",
+  "https://1.bp.blogspot.com/-oErCKPcgcOU/Xl7r_N4QvmI/AAAAAAAAF_A/XE-V1UKlGVIu_aCw0AMnRT9SToRY9xrHgCLcBGAsYHQ/s1600/compass-02.gif",
+  "https://1.bp.blogspot.com/-kBaxLYueoE0/Xl7r_EXtpFI/AAAAAAAAF-8/WnITUwIdRF8ne-8vZRJxqc5Jeq7gZcQjACLcBGAsYHQ/s1600/compass-03.gif",
+  "https://1.bp.blogspot.com/-Us4pTbAYkF0/Xl7r_0KzueI/AAAAAAAAF_E/5RNjCIbkLxg27yeJBrwCPIuupVa6qIFcgCLcBGAsYHQ/s1600/compass-04.gif",
+  "https://1.bp.blogspot.com/-PINUA1EFwjA/Xl7sABxTKSI/AAAAAAAAF_I/xBvJRU5KLqAtH83CgmqpbzKMQZGwLNBugCLcBGAsYHQ/s1600/compass-05.gif",
+  "https://1.bp.blogspot.com/-daL9zrP1ilk/Xl7sAXuK0KI/AAAAAAAAF_M/5uws_pwmkUktcifv9PdBkvLP5EDZO61fQCLcBGAsYHQ/s1600/compass-06.gif",
+  "https://1.bp.blogspot.com/-Gnkl-dMjvPM/Xl7sARGpCrI/AAAAAAAAF_Q/hJ4JlgbBDUcMXkYAEzjeyWdJ3xbbT9qLACLcBGAsYHQ/s1600/compass-07.gif",
+  "https://1.bp.blogspot.com/-xkMQaXkf5K0/Xl7sAlM00NI/AAAAAAAAF_U/mYxXIT46aMgebLN-_UVUgUSe8MwX5cebgCLcBGAsYHQ/s1600/compass-08.gif",
+  "https://1.bp.blogspot.com/-P03-uNPqr6c/Xl7sAyArXGI/AAAAAAAAF_Y/CRt8HT7Djp8kBJZaraFQkVFVcG_jXjrIQCLcBGAsYHQ/s1600/compass-09.gif",
+  "https://1.bp.blogspot.com/-OzKBfKjkYrY/Xl7sBE1z6GI/AAAAAAAAF_c/uiwOu8TlfaAXjcfW4DS4IrUP2GsQTCQOwCLcBGAsYHQ/s1600/compass-10.gif",
+  "https://1.bp.blogspot.com/-gU3Ij8RVVYw/Xl7sBcEMuhI/AAAAAAAAF_g/coAQyX-MzFwfN5gS5TN4NspRKnRqNx9PgCLcBGAsYHQ/s1600/compass-11.gif",
+  "https://1.bp.blogspot.com/-XyUzRXVt9K4/Xl7sBiPdqUI/AAAAAAAAF_k/ytHfTQe93y8IQ97iIBAWglkbExDIes7lQCLcBGAsYHQ/s1600/compass-12.gif",
+  "https://1.bp.blogspot.com/-6Tn7KZEPEMk/Xl7sB4gS3ZI/AAAAAAAAF_o/cYDCoEqLm0sa_x3dsMU4seMUOCMTcT33gCLcBGAsYHQ/s1600/compass-13.gif",
+  "https://1.bp.blogspot.com/-OKcM7XsV1jg/Xl7sCDpyn9I/AAAAAAAAF_s/Vqzv6z0srUUcdtMjrVEk1Jup2szcr0dfwCLcBGAsYHQ/s1600/compass-14.gif",
+  "https://1.bp.blogspot.com/-qTPRKVUKPs8/Xl7sCVc3uSI/AAAAAAAAF_w/5l4b64mMu04nYHjMjq4vqfpuKgFX7XFdwCLcBGAsYHQ/s1600/compass-15.gif",
+  "https://1.bp.blogspot.com/-MSxdmrBghGA/Xl7sDNYJoeI/AAAAAAAAF_0/EMiTsrdakQ81SWIJo5v61miO21AStAGkwCLcBGAsYHQ/s1600/compass-16.gif"];
+
+init();
+
+function random_image(images) {
+  var random = randomize(images);
+  while(images[random] === document.getElementById("image").src){
+    random = randomize(images)
+  }
+  document.getElementById("image").src = images[random].toString();
+}
+
+function randomize(array){
+  return Math.floor((Math.random() * (array.length)));
+}
+
+function init() {
+  document.getElementById("image").addEventListener("click", function(){
+    random_image(images);
+  });
+  random_image(images);
+}</script>
+  </body>
+</html>
